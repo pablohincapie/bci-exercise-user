@@ -1,0 +1,9 @@
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.service.UsuarioService","_attributes":["public"],"supers":[]},"_methodName":"isValidData","_attributes":["public"],"_argNames":["usuarioDTO"],"_argTypes":["com.bci.exercise.user.dto.UsuarioDTO"],"_returnType":"boolean","offset":2092}
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.util.Util","_attributes":["public"],"supers":[]},"_methodName":"isValidEmail","_attributes":["public","static"],"_argNames":["email"],"_argTypes":["java.lang.String"],"_returnType":"boolean","offset":2178}
+)
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.util.Util","_attributes":["public"],"supers":[]},"_methodName":"isValidPassword","_attributes":["public","static"],"_argNames":["password"],"_argTypes":["java.lang.String"],"_returnType":"boolean","offset":2223}
+)
+)

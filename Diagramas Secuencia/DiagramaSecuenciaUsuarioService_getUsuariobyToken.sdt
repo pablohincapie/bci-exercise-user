@@ -1,0 +1,12 @@
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.service.UsuarioService","_attributes":["public"],"supers":[]},"_methodName":"getUsuariobyToken","_attributes":["public"],"_argNames":["token"],"_argTypes":["java.lang.String"],"_returnType":"java.util.Optional\u003ccom.bci.exercise.user.model.Usuario\u003e","offset":2544}
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.repository.UsuarioRepository","_attributes":["public","abstract","interface"],"supers":["org.springframework.data.jpa.repository.JpaRepository","org.springframework.data.repository.PagingAndSortingRepository","org.springframework.data.repository.CrudRepository","org.springframework.data.repository.Repository","org.springframework.data.repository.query.QueryByExampleExecutor"]},"_methodName":"findByToken","_attributes":["public","abstract","interface"],"_argNames":["token"],"_argTypes":["java.lang.String"],"_returnType":"java.util.Optional\u003ccom.bci.exercise.user.model.Usuario\u003e","offset":2638}
+)
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.util.JwtTokenUtil","_attributes":["public"],"supers":[]},"_methodName":"generateToken","_attributes":["public","static"],"_argNames":["username"],"_argTypes":["java.lang.String"],"_returnType":"java.lang.String","offset":2840}
+)
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.repository.UsuarioRepository","_attributes":["public","abstract","interface"],"supers":["org.springframework.data.jpa.repository.JpaRepository","org.springframework.data.repository.PagingAndSortingRepository","org.springframework.data.repository.CrudRepository","org.springframework.data.repository.Repository","org.springframework.data.repository.query.QueryByExampleExecutor"]},"_methodName":"save","_attributes":["public","abstract","interface"],"_argNames":["usuario"],"_argTypes":["com.bci.exercise.user.model.Usuario"],"_returnType":"com.bci.exercise.user.model.Usuario","offset":3181}
+)
+)

@@ -1,0 +1,33 @@
+@startuml
+!define ICONURL https://www.plantuml.com/gnome
+!define SPRITESURL https://www.plantuml.com/sprites
+
+!includeurl ICONURL/common.puml
+!includeurl ICONURL/font-awesome-5/common.puml
+
+package "Cliente (Frontend)" {
+  [UsuarioWeb] <<Web Browser>>
+}
+
+package "Controlador de Registro de Usuarios" {
+  [UsuarioController] <<Spring Controller>>
+}
+
+package "Servicio de Usuarios" {
+  [UsuarioService] <<Spring Service>>
+}
+
+database "Base de Datos (Persistencia)" {
+  [UsuariosTable] <<Spring Data JPA Entity>>
+}
+
+cloud "Otros Servicios o Sistemas Externos" {
+  [OtrosServicios]
+}
+
+[UsuarioWeb] --> [UsuarioController] : Realizar petición POST /api/usuarios/sign-up
+[UsuarioController] --> [UsuarioService] : Invocar método registrarUsuario()
+[UsuarioService] --> [UsuariosTable] : Registrar nuevo usuario
+[UsuarioService] --> [OtrosServicios] : Otras operaciones si es necesario
+
+@enduml

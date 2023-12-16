@@ -1,0 +1,9 @@
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.service.UsuarioService","_attributes":["public"],"supers":[]},"_methodName":"convertirPhoneToEntity","_attributes":["public"],"_argNames":["listPhone","usuario"],"_argTypes":["java.util.List\u003ccom.bci.exercise.user.dto.PhoneDTO\u003e","com.bci.exercise.user.model.Usuario"],"_returnType":"com.bci.exercise.user.model.Phone","offset":1564}
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.model.Phone","_attributes":["public"],"supers":[]},"_methodName":"new","_attributes":["public"],"_argNames":[],"_argTypes":[],"_returnType":"com.bci.exercise.user.model.Phone","offset":1654}
+)
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.model.Phone","_attributes":["public"],"supers":[]},"_methodName":"new","_attributes":["public"],"_argNames":[],"_argTypes":[],"_returnType":"com.bci.exercise.user.model.Phone","offset":1749}
+)
+)
