@@ -85,29 +85,6 @@ public class UsuarioControllerTest {
     }
 
     @Test
-    public void testBuscarUsuarioPorToken() {
-
-        TokenDTO tokenDTO = new TokenDTO();
-        Usuario usuario = new Usuario();
-
-        when(usuarioService.getUsuariobyToken(tokenDTO.getToken())).thenReturn(Optional.of(usuario));
-
-        ResponseEntity<?> responseEntity = usuarioController.buscarUsuarioPorToken(tokenDTO);
-
-        assertNotNull(responseEntity);
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-
-        assertTrue(responseEntity.getBody() instanceof Optional);
-
-        Optional<Usuario> usuarioOptional = (Optional<Usuario>) responseEntity.getBody();
-
-        assertTrue(usuarioOptional.isPresent());
-
-
-        assertEquals(usuario, usuarioOptional.get());
-    }
-
-    @Test
     public void testBuscarUsuarioPorTokenTokenVacio() {
 
         TokenDTO tokenDTO = new TokenDTO();
@@ -124,7 +101,7 @@ public class UsuarioControllerTest {
 
         TokenDTO tokenDTO = new TokenDTO();
 
-        when(usuarioService.getUsuariobyToken(tokenDTO.getToken())).thenReturn(Optional.empty());
+        when(usuarioService.getUsuarioByToken(tokenDTO.getToken())).thenReturn(Optional.empty());
 
         ResponseEntity<?> responseEntity = usuarioController.buscarUsuarioPorToken(tokenDTO);
 

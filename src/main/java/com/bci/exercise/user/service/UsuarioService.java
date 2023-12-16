@@ -12,6 +12,7 @@ import com.bci.exercise.user.util.Util;
 import com.bci.exercise.user.util.PasswordEncryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +24,8 @@ public class UsuarioService {
     @Autowired
     PhoneRepository phoneRepository;
 
-    public UsuarioService(PhoneRepository phoneRepositoryMock) {
+    public UsuarioService(PhoneRepository phoneRepository) {
+        this.phoneRepository = phoneRepository;
     }
 
     public Usuario crearUsuario(UsuarioDTO usuarioDTO) {
