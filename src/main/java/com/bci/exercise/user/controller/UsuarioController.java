@@ -42,17 +42,21 @@ public class UsuarioController {
         return new ResponseEntity<>(nuevoUsuario, HttpStatus.CREATED);
 
     }
-    @GetMapping("/login")
+
+    @GetMapping(value = "/login",
+            produces = {"application/json"},
+            consumes = {"application/json"}
+    )
     public ResponseEntity<?> buscarUsuarioPorToken(@Valid @RequestBody TokenDTO tokenDTO) {
 
-        if (tokenDTO.getToken() != null && !tokenDTO.getToken().isBlank()) {
+        if (tokenDTO.getToken() != null && tokenDTO.getToken().isBlank()) {
             ErrorResponse errorResponse = new ErrorResponse(new Timestamp(System.currentTimeMillis()), HttpStatus.BAD_REQUEST, "Debe ingresar un token para continuar.");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
         }
 
-        Optional<Usuario> usuario = usuarioService.getUsuariobyToken(tokenDTO.getToken());
+        Optional<Usuario> usuario = usuarioService.getUsuarioByToken(tokenDTO.getToken());
         if (usuario.isPresent()) {
-            return new ResponseEntity<>(usuario, HttpStatus.OK);
+            return new ResponseEntity<>(usuarioService.valoresResultado(usuario.get()), HttpStatus.OK);
         }
         ErrorResponse errorResponse = new ErrorResponse(new Timestamp(System.currentTimeMillis()), HttpStatus.NOT_FOUND, "El token ingresado no corresponde a un usuario.");
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);

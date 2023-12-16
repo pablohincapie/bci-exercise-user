@@ -1,5 +1,10 @@
 package com.bci.exercise.user.dto;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class PhoneDTO {
     private long number;
     private int citycode;
@@ -24,6 +29,7 @@ public class PhoneDTO {
     public String getContrycode() {
         return contrycode;
     }
+
     public void setContrycode(String contrycode) {
         this.contrycode = contrycode;
     }
@@ -33,5 +39,7 @@ public class PhoneDTO {
         this.citycode = citycode;
         this.contrycode = contrycode;
     }
-    public PhoneDTO(){}
+
+    public PhoneDTO() {
+    }
 }
