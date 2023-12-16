@@ -1,0 +1,6 @@
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.service.UsuarioService","_attributes":["public"],"supers":[]},"_methodName":"existUsuario","_attributes":["public"],"_argNames":["email"],"_argTypes":["java.lang.String"],"_returnType":"boolean","offset":2354}
+(
+{"_classDescription":{"_className":"com.bci.exercise.user.repository.UsuarioRepository","_attributes":["public","abstract","interface"],"supers":["org.springframework.data.jpa.repository.JpaRepository","org.springframework.data.repository.PagingAndSortingRepository","org.springframework.data.repository.CrudRepository","org.springframework.data.repository.Repository","org.springframework.data.repository.query.QueryByExampleExecutor"]},"_methodName":"findByEmail","_attributes":["public","abstract","interface"],"_argNames":["email"],"_argTypes":["java.lang.String"],"_returnType":"java.util.Optional\u003ccom.bci.exercise.user.model.Usuario\u003e","offset":2445}
+)
+)

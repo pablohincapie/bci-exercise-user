@@ -13,10 +13,6 @@ public class ErrorResponse {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
-    }
-
     public HttpStatus getCodigo() {
         return codigo;
     }

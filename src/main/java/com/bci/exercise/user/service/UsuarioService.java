@@ -43,15 +43,11 @@ public class UsuarioService {
         Phone phone = new Phone();
 
         for (PhoneDTO phoneResult : listPhone) {
-            Phone phoneEntity = new Phone(); // Crear una nueva instancia para cada elemento
+            Phone phoneEntity = new Phone();
             phoneEntity.setNumber(phoneResult.getNumber());
             phoneEntity.setCityCode(phoneResult.getCitycode());
             phoneEntity.setCountryCode(phoneResult.getContrycode());
             phoneEntity.setUsuario(usuario);
-
-            // Aquí podrías almacenar la instancia creada en una lista o en algún otro lugar si es necesario
-
-            // Si solo necesitas el último elemento de la lista, podrías sobrescribir 'phone' aquí
             phone = phoneEntity;
         }
 
